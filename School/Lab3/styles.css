@@ -6,7 +6,7 @@
     --blue-color: rgb(29, 155, 240);
     --grey-text: rgb(113, 118, 123);
     --grey-bg: rgb(32, 35, 39);
-    --dark-grey-bg:rgb(22, 24, 28);
+    --dark-grey-bg: rgb(22, 24, 28);
 }
 
 * {
@@ -74,11 +74,11 @@ header {
     font-size: 20px;
 }
 
-.sidebar-helper{
+.sidebar-helper {
     justify-content: space-between;
     height: 100%;
     width: 255px;
-    margin-left:30px;
+    margin-left: 30px;
 }
 
 .logo {
@@ -91,7 +91,7 @@ nav {
     align-items: flex-start;
     flex-direction: column;
     gap: 30px;
-    margin-bottom:30px
+    margin-bottom: 30px
 }
 
 .navlink>div {
@@ -102,11 +102,11 @@ nav {
 .icon {
     height: 1.75rem;
     width: 1.57rem;
-    margin-top:2px;
+    margin-top: 2px;
 }
 
 .navtext {
-    margin-bottom:7px;
+    margin-bottom: 7px;
     margin-right: 16px;
     margin-left: 20px;
     overflow: hidden;
@@ -120,12 +120,12 @@ nav {
     min-height: 52px;
     margin-bottom: 4px;
     margin-top: 4px;
-    display:flex;
+    display: flex;
 
 }
 
 .tweet-anchor {
-    width:90%;
+    width: 90%;
     background-color: var(--blue-color);
     box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
     cursor: pointer;
@@ -139,7 +139,7 @@ nav {
 }
 
 .tweet-anchor>span {
-    padding-top:10px;
+    padding-top: 10px;
 }
 
 .profile-info {
@@ -164,7 +164,7 @@ nav {
     border-radius: 50%;
 }
 
-.handle{
+.handle {
     color: var(--grey-text);
 }
 
@@ -181,16 +181,24 @@ main {
 
 .middle {
     width: 990px;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: stretch;
 }
 
+.border-line {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgb(47, 51, 54);
+}
+
 .timeline {
     max-width: 600px;
     margin-right: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
+
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
@@ -204,21 +212,17 @@ main {
 }
 
 .timeline>h2 {
-    height:3rem;
+    height: 3rem;
     font-size: 20px;
 }
 
-.tabs{
-    width:100%;
+.tabs {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     margin-top: 10px;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: rgb(47, 51, 54);
-
 }
 
 .tab-text {
@@ -231,9 +235,9 @@ main {
 }
 
 .tab-underline {
-    height:4px;
+    height: 4px;
     background-color: var(--blue-color);
-    width:100%;
+    width: 100%;
     display: inline-flex;
     border-radius: 9999px;
 }
@@ -245,46 +249,40 @@ main {
 
 
 .compose {
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     margin-top: 10px;
-    margin-left:10px;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: rgb(47, 51, 54);
-
 }
 
-.compose-area { 
+.compose-area {
+    margin-left: 10px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .placeholder-text {
     color: var(--grey-text);
-    margin-left: 15px;
+    margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 20px;
-    font-weight: 10px;
-
 }
-
 
 .compose-menu {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
-    justify-items: stretch;
-    
+    margin-top: 40px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .compose-icons {
     align-self: flex-start;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
     align-items: center;
 }
@@ -293,6 +291,13 @@ main {
     height: 1.2rem;
     width: 1.2rem;
     margin-bottom: 10px;
+    fill: var(--blue-color);
+    filter: hue-rotate(180deg);
+}
+
+.compose-icon:nth-of-type(6) {
+    filter: hue-rotate(180deg) saturate(50%) brightness(50%);
+
 }
 
 .compose-button {
@@ -309,7 +314,48 @@ main {
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    margin-right: 40px;
 }
+
+
+.tweet {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.tweet-body {
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.tweet-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+    padding-right: 100px;
+    justify-content: space-between;
+    filter: brightness(0.5);
+}
+
+.tweet-menu>svg {
+    margin-left: -10px;
+}
+
+
 
 .right {
     width: 350px;
@@ -319,7 +365,7 @@ main {
     width: 350px;
     height: 53px;
     background-color: var(--grey-bg);
-    border-radius:25px;
+    border-radius: 25px;
     margin-bottom: 12px;
     display: flex;
     flex-direction: row;
@@ -344,17 +390,17 @@ main {
 .grey-container {
     background-color: var(--dark-grey-bg);
     border-color: var(--dark-grey-bg);
-    border-radius:15px;
+    border-radius: 15px;
     margin-top: 20px;
     margin-bottom: 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: left;
-    
+
 }
 
-.grey-container-text{
+.grey-container-text {
     margin-left: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -363,7 +409,7 @@ main {
 }
 
 .grey-container-item {
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -371,7 +417,7 @@ main {
     margin-left: 5px;
     margin-bottom: 10px;
     padding: 12px;
-    gap:1px;    
+    gap: 1px;
 
 }
 
