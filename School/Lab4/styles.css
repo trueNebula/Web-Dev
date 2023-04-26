@@ -1,0 +1,33 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #9BA4B5;
+    color: #212A3E;
+    text-align: center;
+    font-size: 40px;
+}
+
+table{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #394867;
+    border-spacing: 0px;
+    border-radius: 10px;
+    border-collapse: separate;
+}
+
+th, td{
+    padding: 20px;
+    background-color: #bfc2c4;
+    cursor: pointer;
+    user-select: none;
+}
+
+td {
+    background-color: #F1F6F9;
+    cursor: default;
+}
