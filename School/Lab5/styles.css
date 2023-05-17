@@ -21,3 +21,30 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+#wrapper{
+    padding:8px;
+}
+
+#dialog{
+    opacity: 0;
+}
+
+.space{
+    width:40%;
+}
+
+.space-small{
+    width:30%;
+}
+
+.title{
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.btn{
+    padding: 5px 10px;
+}

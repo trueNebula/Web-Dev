@@ -14,9 +14,26 @@ window.onload = () => {
     [].forEach.call(headers, function(header, index) {
         header.addEventListener('click', function() {
             sortColumn(index, directions);
+            removeCell();
         });
     });
 };
+
+function removeCell(){
+    const table = document.getElementById("sorting");
+    const tableBody = table.querySelector('tbody');
+    const rows = tableBody.querySelectorAll('tr');
+
+    for (var row in rows){
+        var cells = rows[row].querySelectorAll('td');
+        
+        for (var cell in cells){
+            if (cells[cell].innerHTML === "Serum"){
+                cells[cell].innerHTML = "";
+            }
+        }
+    }
+}
 
 function sortColumn(index, directions) {
     const table = document.getElementById("sorting");
@@ -35,7 +52,6 @@ function sortColumn(index, directions) {
     for (var row in newRows) {
         const cells = newRows[row].querySelectorAll('td');
         cellsToSort.push(cells[index].innerHTML);
-
     }
 
     cellsToSort.sort((a, b) => {
